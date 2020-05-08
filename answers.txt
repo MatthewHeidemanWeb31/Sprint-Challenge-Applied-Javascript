@@ -1,0 +1,14 @@
+1. What is the DOM?
+ans: The DOM is a tree like representation of all the different components in an application.
+
+2. What is an event?
+an event is any type of user action like hover, mouseover, or dblclick
+
+3. What is an event listener?
+an event listener is a function that looks for a specific event and does soemething before or after
+
+4. Why would we convert a NodeList into an Array?
+there are some array methods that do not work on nodelists
+
+5. What is a component?
+an individual part of an application
