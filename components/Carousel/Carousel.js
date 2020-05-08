@@ -17,7 +17,17 @@
     <div class="right-button"> > </div>
   </div>
 */
+let count = 0
+console.log(count)
+const imgArr = [
+  `../../../assets/carousel/mountains.jpeg`,
+  `../../../assets/carousel/computer.jpeg`,
+  `../../../assets/carousel/trees.jpeg`,
+  `../../../assets/carousel/turntable.jpeg`
+]
 function createCarousel(){
+  
+  
   const container = document.createElement('div');
   let leftButton = document.createElement('div');
   let rightButton = document.createElement('div');
@@ -26,10 +36,23 @@ function createCarousel(){
   leftButton.classList.add('left-button');
   rightButton.classList.add('right-button');
   container.appendChild(img)
+  img.src = imgArr[count]
+ 
   container.appendChild(leftButton);
   container.appendChild(rightButton);
   return container;
 };
 const carouselParent = document.querySelector('.carousel-container');
-carouselParent.appendChild(container);
+carouselParent.appendChild(createCarousel());
+rightButton = document.querySelector('.right-button');
+leftButton = document.querySelector('.left-button');
+count = count + 1
 
+rightButton.addEventListener('click', e => {
+  console.log(count)
+  return count += 1
+})
+leftButton.addEventListener('click', e => {
+  console.log(count)
+  return count -= 1
+})
